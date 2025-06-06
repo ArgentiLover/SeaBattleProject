@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RobotDifficulty</class>
+ <widget class="QMainWindow" name="RobotDifficulty">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>720</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: qlineargradient(
+    x1: 0, y1: 0,
+    x2: 1, y2: 1,
+    stop: 0 #a0e9ff,
+    stop: 1 #00bcd4
+);
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_easy">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>260</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 12pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>Лёгкий</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_easy">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>130</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-image: url(:/images/images/good_robot_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    border: 2px solid white;
+    border-radius: 6px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #00bcd4;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_hard">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>130</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-image: url(:/images/images/bad_robot.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    border: 2px solid white;
+    border-radius: 6px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #00bcd4;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_hard">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>260</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 12pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>Сложный</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_return">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-image: url(:/images/images/return_button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_title">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>40</y>
+      <width>321</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 18pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>Уровень сложности</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_normal">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>260</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 12pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>Нормальный</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_normal">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>130</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-image: url(:/images/images/robot_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
+    border: 2px solid white;
+    border-radius: 6px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #00bcd4;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>720</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Морской Бой - Выбор сложности</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CustomizationMenu</class>
+ <widget class="QMainWindow" name="CustomizationMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>670</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Морской бой - Настройки</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: qlineargradient(
+    x1: 0, y1: 0,
+    x2: 1, y2: 1,
+    stop: 0 #a0e9ff,
+    stop: 1 #00bcd4
+);
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QSpinBox" name="spinBox_fieldSize">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>150</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f0f8ff;
+    color: #333;
+    font-size: 16px;
+    width: 80px;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    border: 1px solid #4a90e2;
+    border-radius: 3px;
+    background-color: #d4e6f1;
+    width: 18px;
+}
+
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background-color: #4a90e2;
+}
+
+QSpinBox::up-button:pressed, QSpinBox::down-button:pressed {
+    background-color: #2e72a0;
+}
+
+QSpinBox::edit-line {
+    border: none;
+    background-color: transparent;
+    padding-left: 5px;
+}
+</string>
+    </property>
+    <property name="minimum">
+     <number>6</number>
+    </property>
+    <property name="maximum">
+     <number>16</number>
+    </property>
+    <property name="value">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_fieldSize">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>110</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 12pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>Размер поля</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_title">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>40</y>
+      <width>321</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 18pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>Настройки</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_return">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>51</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-image: url(:/images/images/return_button.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_ships_placement">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>140</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    background-color: #f0f8ff;
+    color: #333;
+    font-size: 16px;
+    padding: 5px;
+    width: 150px;
+}
+
+QComboBox::drop-down {
+    border-left: 1px solid #4a90e2;
+    border-radius: 0 5px 5px 0;
+    background-color: #d4e6f1;
+}
+
+QComboBox::down-arrow {
+    image: url(:/images/images/arrow-down.png);  /* Путь к твоей стрелочке */
+    width: 16px;
+    height: 16px;
+}
+
+QComboBox QAbstractItemView {
+    border: 2px solid #4a90e2;
+    background-color: #f0f8ff;
+    color: #333;
+    font-size: 16px;
+}
+
+QComboBox::item {
+    padding: 5px;
+}
+
+QComboBox::item:selected {
+    background-color: #4a90e2;
+    color: white;
+}
+</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Могут касаться</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Не могут касаться</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_ships_placement">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>100</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 12pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>Размещение кораблей</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_ships_count">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>200</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 12pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>Количество кораблей</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_ships_1">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>240</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f0f8ff;
+    color: #333;
+    font-size: 16px;
+    width: 80px;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    border: 1px solid #4a90e2;
+    border-radius: 3px;
+    background-color: #d4e6f1;
+    width: 18px;
+}
+
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background-color: #4a90e2;
+}
+
+QSpinBox::up-button:pressed, QSpinBox::down-button:pressed {
+    background-color: #2e72a0;
+}
+
+QSpinBox::edit-line {
+    border: none;
+    background-color: transparent;
+    padding-left: 5px;
+}
+</string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>10</number>
+    </property>
+    <property name="value">
+     <number>4</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_ships_2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>240</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f0f8ff;
+    color: #333;
+    font-size: 16px;
+    width: 80px;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    border: 1px solid #4a90e2;
+    border-radius: 3px;
+    background-color: #d4e6f1;
+    width: 18px;
+}
+
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background-color: #4a90e2;
+}
+
+QSpinBox::up-button:pressed, QSpinBox::down-button:pressed {
+    background-color: #2e72a0;
+}
+
+QSpinBox::edit-line {
+    border: none;
+    background-color: transparent;
+    padding-left: 5px;
+}
+</string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>10</number>
+    </property>
+    <property name="value">
+     <number>2</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_ships_3">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>290</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f0f8ff;
+    color: #333;
+    font-size: 16px;
+    width: 80px;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    border: 1px solid #4a90e2;
+    border-radius: 3px;
+    background-color: #d4e6f1;
+    width: 18px;
+}
+
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background-color: #4a90e2;
+}
+
+QSpinBox::up-button:pressed, QSpinBox::down-button:pressed {
+    background-color: #2e72a0;
+}
+
+QSpinBox::edit-line {
+    border: none;
+    background-color: transparent;
+    padding-left: 5px;
+}
+</string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>10</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_ships_4">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>290</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSpinBox {
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f0f8ff;
+    color: #333;
+    font-size: 16px;
+    width: 80px;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    border: 1px solid #4a90e2;
+    border-radius: 3px;
+    background-color: #d4e6f1;
+    width: 18px;
+}
+
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background-color: #4a90e2;
+}
+
+QSpinBox::up-button:pressed, QSpinBox::down-button:pressed {
+    background-color: #2e72a0;
+}
+
+QSpinBox::edit-line {
+    border: none;
+    background-color: transparent;
+    padding-left: 5px;
+}
+</string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>10</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_ships_count_1">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>240</y>
+      <width>21</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 12pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_ships_count_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>290</y>
+      <width>21</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 12pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_ships_count_3">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>240</y>
+      <width>21</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 12pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_ships_count_4">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>290</y>
+      <width>21</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 12pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_shooting">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>240</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    background-color: #f0f8ff;
+    color: #333;
+    font-size: 16px;
+    padding: 5px;
+    width: 150px;
+}
+
+QComboBox::drop-down {
+    border-left: 1px solid #4a90e2;
+    border-radius: 0 5px 5px 0;
+    background-color: #d4e6f1;
+}
+
+QComboBox::down-arrow {
+    image: url(:/images/images/arrow-down.png);  /* Путь к твоей стрелочке */
+    width: 16px;
+    height: 16px;
+}
+
+QComboBox QAbstractItemView {
+    border: 2px solid #4a90e2;
+    background-color: #f0f8ff;
+    color: #333;
+    font-size: 16px;
+}
+
+QComboBox::item {
+    padding: 5px;
+}
+
+QComboBox::item:selected {
+    background-color: #4a90e2;
+    color: white;
+}
+</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Одиночная</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Стандартная</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Радар</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_shooting">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>200</y>
+      <width>241</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 12pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>Правила стрельбы</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider_time">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>320</y>
+      <width>160</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>10</number>
+    </property>
+    <property name="maximum">
+     <number>60</number>
+    </property>
+    <property name="value">
+     <number>30</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_time_text">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>280</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 12pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>Время на ход</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_time">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>310</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 12pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>30</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_startGame">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>300</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+QPushButton:hover {
+    background-color: #357ab8;
+}
+
+QPushButton:pressed {
+    background-color: #2a5f8f;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Начать игру</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>670</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Морской бой - Настройки</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/return_button.png</file>
+        <file>images/robot_icon.png</file>
+        <file>images/human_icon.png</file>
+        <file>images/remote_computers_icon.png</file>
+        <file>images/computer_icon.png</file>
+        <file>images/good_robot_icon.png</file>
+        <file>images/bad_robot.png</file>
+        <file>images/restart_icon.png</file>
+        <file>images/app_icon.png</file>
+    </qresource>
+</RCC>

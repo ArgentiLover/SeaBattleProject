@@ -1,0 +1,14 @@
+build/
+*.user
+*.suo
+*.log
+*.exe
+*.dll
+*.obj
+*.o
+*.moc
+*.qrc.depends
+*.qrc.exe
+*.rcc.exe
+.DS_Store
+Thumbs.db
