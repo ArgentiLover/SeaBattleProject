@@ -39,6 +39,7 @@ void RobotDifficulty::on_pushButton_return_clicked()
 
 void RobotDifficulty::on_pushButton_easy_clicked()
 {
+    return;
     GameSettings::difficulty = Difficulty::Easy;
     QPropertyAnimation *fadeOut = new QPropertyAnimation(this, "windowOpacity");
     fadeOut->setDuration(200);
@@ -59,6 +60,7 @@ void RobotDifficulty::on_pushButton_easy_clicked()
 
 void RobotDifficulty::on_pushButton_normal_clicked()
 {
+    return;
     GameSettings::difficulty = Difficulty::Medium;
     QPropertyAnimation *fadeOut = new QPropertyAnimation(this, "windowOpacity");
     fadeOut->setDuration(200);
@@ -79,6 +81,7 @@ void RobotDifficulty::on_pushButton_normal_clicked()
 
 void RobotDifficulty::on_pushButton_hard_clicked()
 {
+    return;
     GameSettings::difficulty = Difficulty::Hard;
     QPropertyAnimation *fadeOut = new QPropertyAnimation(this, "windowOpacity");
     fadeOut->setDuration(200);
