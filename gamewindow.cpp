@@ -151,7 +151,7 @@ void GameWindow::handleCellClick(int x, int y)
         enemyField->setCell(x, y, Field::Miss);
     }
 
-    // Режим "Радар" — подсветка соседних клеток статусом RadarHit, если не попал
+    // Режим "Радар" — подсветка соседних клеток с кораблями, если не попал
     if (GameSettings::getShootingRule() == "Радар" && !hit) {
         for (int dx = -1; dx <= 1; ++dx) {
             for (int dy = -1; dy <= 1; ++dy) {
@@ -199,7 +199,6 @@ void GameWindow::switchTurn()
     waitingForNextPlayer = true;
     currentPlayer = 3 - currentPlayer;
 
-    // Обновляем текст на кнопке
     switchPlayerButton->setText(QString("Ход игрока %1").arg(currentPlayer));
     switchPlayerButton->setVisible(true);
 
@@ -212,9 +211,6 @@ void GameWindow::updateUI()
                                  ? QString("Передайте управление игроку %1").arg(currentPlayer)
                                  : QString("Ход игрока %1").arg(currentPlayer));
 
-    Field* leftField = player1Field;
-    Field* rightField = player2Field;
-
     auto& leftButtons = player1Buttons;
     auto& rightButtons = player2Buttons;
 
@@ -222,8 +218,8 @@ void GameWindow::updateUI()
 
     for (int y = 0; y < size; ++y) {
         for (int x = 0; x < size; ++x) {
-            QPushButton* btnLeft = leftButtons[y][x];
-            QPushButton* btnRight = rightButtons[y][x];
+            QPushButton* btnLeft = player1Buttons[y][x];
+            QPushButton* btnRight = player2Buttons[y][x];
 
             if (waitingForNextPlayer) {
                 turnTimer->stop();
@@ -234,8 +230,7 @@ void GameWindow::updateUI()
                 btnLeft->setStyleSheet("background-color: gray; border: 1px solid gray;");
                 btnRight->setStyleSheet("background-color: gray; border: 1px solid gray;");
             } else {
-                // Существующая логика из updateUI(), например для левого поля
-                Field::CellStatus stateLeft = leftField->getCell(x, y);
+                Field::CellStatus stateLeft = player1Field->getCell(x, y);
                 QString styleLeft;
                 if (currentPlayer == 1) {
                     switch (stateLeft) {
@@ -261,7 +256,7 @@ void GameWindow::updateUI()
                 btnLeft->setStyleSheet(styleLeft);
 
                 // Правое поле аналогично
-                Field::CellStatus stateRight = rightField->getCell(x, y);
+                Field::CellStatus stateRight = player2Field->getCell(x, y);
                 QString styleRight;
                 if (currentPlayer == 2) {
                     switch (stateRight) {
