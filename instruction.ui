@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>796</width>
+    <height>809</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: qlineargradient(
+    x1: 0, y1: 0,
+    x2: 1, y2: 1,
+    stop: 0 #a0e9ff,
+    stop: 1 #00bcd4
+);
+</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>20</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 180);
+color: #003c4d; 
+border: 1px solid #66cdda;
+border-radius: 10px;
+padding: 10px;
+font-size: 14pt;
+font-weight: bold;
+font-family: &quot;Segoe UI&quot;, &quot;Arial&quot;, sans-serif;
+line-height: 1.4em;</string>
+   </property>
+   <property name="text">
+    <string>Инструкция</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>80</y>
+     <width>621</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 160);
+color: #004d5c;
+border: 1px solid #88ddea;
+border-radius: 8px;
+padding: 8px;
+font-size: 12pt;
+font-weight: normal;
+font-family: &quot;Segoe UI&quot;, &quot;Arial&quot;, sans-serif;
+</string>
+   </property>
+   <property name="text">
+    <string>В этом Морском бое вы можете играть с другом на 1 устройстве.</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>430</y>
+     <width>231</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 160);
+color: #004d5c;
+border: 1px solid #88ddea;
+border-radius: 8px;
+padding: 8px;
+font-size: 12pt;
+font-weight: normal;
+font-family: &quot;Segoe UI&quot;, &quot;Arial&quot;, sans-serif;
+</string>
+   </property>
+   <property name="text">
+    <string>Размещение кораблей</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>140</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 160);
+color: #004d5c;
+border: 1px solid #88ddea;
+border-radius: 8px;
+padding: 8px;
+font-size: 12pt;
+font-weight: normal;
+font-family: &quot;Segoe UI&quot;, &quot;Arial&quot;, sans-serif;
+</string>
+   </property>
+   <property name="text">
+    <string>Режим стрельбы</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 160);
+color: #004d5c;
+border: 1px solid #88ddea;
+border-radius: 8px;
+padding: 8px;
+font-size: 12pt;
+font-weight: normal;
+font-family: &quot;Segoe UI&quot;, &quot;Arial&quot;, sans-serif;
+</string>
+   </property>
+   <property name="text">
+    <string>Одиночная</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>200</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 160);
+color: #004d5c;
+border: 1px solid #88ddea;
+border-radius: 8px;
+padding: 8px;
+font-size: 12pt;
+font-weight: normal;
+font-family: &quot;Segoe UI&quot;, &quot;Arial&quot;, sans-serif;
+</string>
+   </property>
+   <property name="text">
+    <string>Стандартная</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>200</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 160);
+color: #004d5c;
+border: 1px solid #88ddea;
+border-radius: 8px;
+padding: 8px;
+font-size: 12pt;
+font-weight: normal;
+font-family: &quot;Segoe UI&quot;, &quot;Arial&quot;, sans-serif;
+</string>
+   </property>
+   <property name="text">
+    <string>Радар</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>250</y>
+     <width>161</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/images/images/single.png);
+background-repeat: no-repeat;
+background-position: center;
+background-color: transparent;
+border: none;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>250</y>
+     <width>151</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/images/images/standard.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>250</y>
+     <width>151</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/images/images/radar.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>480</y>
+     <width>251</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/images/images/horizontal.png);
+background-repeat: no-repeat;
+background-position: center;
+background-color: transparent;
+border: none;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>450</y>
+     <width>101</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/images/images/vertical.png);
+background-repeat: no-repeat;
+background-position: center;
+background-color: transparent;
+border: none;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_13">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>520</y>
+     <width>101</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/images/images/arrow_right.png);
+background-repeat: no-repeat;
+background-position: center;
+background-color: transparent;
+border: none;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_14">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>500</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;
+color: #004d5c;
+border: none;
+padding: 8px;
+font-size: 12pt;
+font-weight: normal;
+font-family: &quot;Segoe UI&quot;, &quot;Arial&quot;, sans-serif;</string>
+   </property>
+   <property name="text">
+    <string>Правая кнопка мыши</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>680</y>
+     <width>801</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_15">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>710</y>
+     <width>601</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 160);
+color: #004d5c;
+border: 1px solid #88ddea;
+border-radius: 8px;
+padding: 8px;
+font-size: 12pt;
+font-weight: normal;
+font-family: &quot;Segoe UI&quot;, &quot;Arial&quot;, sans-serif;
+</string>
+   </property>
+   <property name="text">
+    <string>Возможная ошибка: таймер идёт после окончания игры;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_16">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>760</y>
+     <width>661</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 160);
+color: #004d5c;
+border: 1px solid #88ddea;
+border-radius: 8px;
+padding: 8px;
+font-size: 12pt;
+font-weight: normal;
+font-family: &quot;Segoe UI&quot;, &quot;Arial&quot;, sans-serif;
+</string>
+   </property>
+   <property name="text">
+    <string>&quot;Не баг, а фича&quot;: границы кораблей могут отображаться по-разному</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

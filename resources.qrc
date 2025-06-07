@@ -9,5 +9,15 @@
         <file>images/bad_robot.png</file>
         <file>images/restart_icon.png</file>
         <file>images/app_icon.png</file>
+        <file>images/radar.png</file>
+        <file>images/single.png</file>
+        <file>images/standard.png</file>
+        <file>images/arrow_right.png</file>
+        <file>images/horizontal.png</file>
+        <file>images/vertical.png</file>
+        <file>images/question.png</file>
+    </qresource>
+    <qresource prefix="/forms">
+        <file>instruction.ui</file>
     </qresource>
 </RCC>

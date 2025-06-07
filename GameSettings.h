@@ -31,6 +31,7 @@ public:
     static OpponentType opponent;
     static Difficulty difficulty;
     static PlatformType platform;
+    static QString player1name, player2name;
 
 
     static void setFieldSize(int size) { fieldSize = size; }

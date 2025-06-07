@@ -129,12 +129,17 @@ void ShipPlacementMenu::placeShipAt(int x, int y) {
         // Проверяем, все ли корабли размещены
         if (allShipsPlaced()) {
             if (currentPlayer == 1) {
+                GameSettings::player1name = ui->lineEdit_name->text();
+                if (GameSettings::player1name == "") GameSettings::player1name = "Игрок 1";
+                ui->lineEdit_name->setText("Игрок 2");
                 currentPlayer = 2;
                 ui->label_player->setText("Игрок 2");
                 field = fieldPlayer2;
                 resetShipPlacementForNewPlayer();
                 QMessageBox::information(this, "Игрок 2", "Теперь ход размещения для Игрока 2.");
             } else {
+                GameSettings::player2name = ui->lineEdit_name->text();
+                if (GameSettings::player2name == "") GameSettings::player2name = "Игрок 2";
                 QMessageBox::information(this, "Готово", "Оба игрока разместили корабли. Игра начинается!");
                 GameWindow* gameWin = new GameWindow(fieldPlayer1, fieldPlayer2);
                 gameWin->show();

@@ -320,6 +320,47 @@ QPushButton:hover {
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="label_name">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>70</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: transparent;
+font-size: 12pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>Имя</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_name">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>50</y>
+      <width>171</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font-size: 14pt;
+font-weight: bold;
+padding-top: 4px;
+qproperty-alignment: AlignHCenter;</string>
+    </property>
+    <property name="text">
+     <string>Игрок 1</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

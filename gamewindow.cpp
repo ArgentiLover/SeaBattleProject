@@ -30,8 +30,10 @@ GameWindow::GameWindow(Field* p1, Field* p2, QWidget *parent)
 
         if (turnTimeRemaining <= 0) {
             turnTimer->stop();
-            QMessageBox::information(this, "Время вышло",
-                                     QString("Игрок %1 пропустил ход.").arg(currentPlayer));
+            if (currentPlayer == 1) QMessageBox::information(this, "Время вышло",
+                                         QString("%1 пропустил ход.").arg(GameSettings::player1name));
+            else QMessageBox::information(this, "Время вышло",
+                                         QString("%1 пропустил ход.").arg(GameSettings::player2name));
             switchTurn();
             updateUI();
         }
@@ -41,7 +43,7 @@ GameWindow::GameWindow(Field* p1, Field* p2, QWidget *parent)
     updateUI();
 
     switchPlayerButton = new QPushButton(this);
-    switchPlayerButton->setText("Ход игрока 1");
+    switchPlayerButton->setText(QString("Ход %1").arg(GameSettings::player1name));
 
     int w = 250;
     int h = 50;
@@ -171,10 +173,13 @@ void GameWindow::handleCellClick(int x, int y)
     if (enemyField->areAllShipsSunk()) {
         turnTimer->stop();
         updateUI();
-        QMessageBox::information(this, "Победа", QString("Игрок %1 победил!").arg(currentPlayer));
+        if (currentPlayer == 1) QMessageBox::information(this, "Победа", QString("%1 победил!").arg(GameSettings::player1name));
+        else QMessageBox::information(this, "Победа", QString("%1 победил!").arg(GameSettings::player2name));
 
         MainWindow *mainWin = new MainWindow();
         mainWin->show();
+
+        delete turnTimer;
 
         this->close();
         return;
@@ -200,7 +205,8 @@ void GameWindow::switchTurn()
     waitingForNextPlayer = true;
     currentPlayer = 3 - currentPlayer;
 
-    switchPlayerButton->setText(QString("Ход игрока %1").arg(currentPlayer));
+    if (currentPlayer == 1) switchPlayerButton->setText(QString("Ход %1").arg(GameSettings::player1name));
+    else switchPlayerButton->setText(QString("Ход %1").arg(GameSettings::player2name));
     switchPlayerButton->setVisible(true);
 
     updateUI();
@@ -208,9 +214,10 @@ void GameWindow::switchTurn()
 
 void GameWindow::updateUI()
 {
-    ui->labelStatus->setText(waitingForNextPlayer
-                                 ? QString("Передайте управление игроку %1").arg(currentPlayer)
-                                 : QString("Ход игрока %1").arg(currentPlayer));
+    if (currentPlayer == 1) ui->labelStatus->setText(waitingForNextPlayer ? QString("Передайте управление %1").arg(GameSettings::player1name)
+                                                      : QString("Ход %1").arg(GameSettings::player1name));
+    else ui->labelStatus->setText(waitingForNextPlayer ? QString("Передайте управление %1").arg(GameSettings::player2name)
+                                                      : QString("Ход %1").arg(GameSettings::player2name));
 
     auto& leftButtons = player1Buttons;
     auto& rightButtons = player2Buttons;
