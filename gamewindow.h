@@ -41,6 +41,7 @@ private:
     void setupGrids();
     void switchTurn();
     void updateUI();
+    QString borderStyleForCell(int x, int y, Field* field);
 };
 
 #endif // GAMEWINDOW_H

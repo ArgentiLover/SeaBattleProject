@@ -192,10 +192,10 @@ void ShipPlacementMenu::createFieldGrid() {
 
 //отрисовывает не так, как планировалось, но мне понравилось
 QString ShipPlacementMenu::borderStyleForCell(int x, int y) {
-    bool leftShip   = (x > 0 && field->getCell(x - 1, y) == Field::Ship);
-    bool rightShip  = (x < field->width() - 1 && field->getCell(x + 1, y) == Field::Ship);
-    bool topShip    = (y > 0 && field->getCell(x, y - 1) == Field::Ship);
-    bool bottomShip = (y < field->height() - 1 && field->getCell(x, y + 1) == Field::Ship);
+    bool leftShip   = (x >= 0 && field->getCell(x - 1, y) == Field::Ship);
+    bool rightShip  = (x <= field->width() - 1 && field->getCell(x + 1, y) == Field::Ship);
+    bool topShip    = (y >= 0 && field->getCell(x, y - 1) == Field::Ship);
+    bool bottomShip = (y <= field->height() - 1 && field->getCell(x, y + 1) == Field::Ship);
 
     QString borderTop    = topShip    ? "border-top: none;"    : "border-top: 2px solid black;";
     QString borderBottom = bottomShip ? "border-bottom: none;" : "border-bottom: 2px solid black;";

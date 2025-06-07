@@ -3,6 +3,7 @@
 
 #include "GameSettings.h"
 #include "mainwindow.h"
+#include "shipplacementmenu.h"
 
 #include <QGridLayout>
 #include <QPushButton>
@@ -242,6 +243,7 @@ void GameWindow::updateUI()
                     case Field::Sunk:  styleLeft = "background-color: black;"; break;
                     }
                     btnLeft->setEnabled(false);
+                    styleLeft += borderStyleForCell(x,y, player1Field);
                 } else {
                     switch (stateLeft) {
                     case Field::Hit:  styleLeft = "background-color: red;"; break;
@@ -251,8 +253,8 @@ void GameWindow::updateUI()
                     default:          styleLeft = "background-color: lightblue;"; break;
                     }
                     btnLeft->setEnabled(stateLeft != Field::Hit && stateLeft != Field::Miss && currentPlayer == 2);
+                    styleLeft += "border: 1px solid gray;";
                 }
-                styleLeft += "border: 1px solid gray;";
                 btnLeft->setStyleSheet(styleLeft);
 
                 // Правое поле аналогично
@@ -268,6 +270,7 @@ void GameWindow::updateUI()
                     case Field::Sunk:  styleRight = "background-color: black;"; break;
                     }
                     btnRight->setEnabled(false);
+                    styleRight += borderStyleForCell(x,y, player2Field);
                 } else {
                     switch (stateRight) {
                     case Field::Hit:  styleRight = "background-color: red;"; break;
@@ -277,8 +280,8 @@ void GameWindow::updateUI()
                     default:          styleRight = "background-color: lightblue;"; break;
                     }
                     btnRight->setEnabled(stateRight != Field::Hit && stateRight != Field::Miss && currentPlayer == 1);
+                    styleRight += "border: 1px solid gray;";
                 }
-                styleRight += "border: 1px solid gray;";
                 btnRight->setStyleSheet(styleRight);
             }
         }
@@ -289,3 +292,17 @@ void GameWindow::updateUI()
     turnTimer->start(1000);
 }
 
+QString GameWindow::borderStyleForCell(int x, int y, Field* field) {
+    if (field->getCell(x,y) == Field::Empty) return "border: 1px solid gray;";
+    bool leftShip   = (x > 0 && field->getCell(x - 1, y) != Field::Empty);
+    bool rightShip  = (x < field->width() - 1 && field->getCell(x + 1, y) != Field::Empty);
+    bool topShip    = (y > 0 && field->getCell(x, y + 1) != Field::Empty);
+    bool bottomShip = (y < field->height() - 1 && field->getCell(x, y - 1) != Field::Empty);
+
+    QString borderTop    = topShip    ? "border-top: none;"    : "border-top: 2px solid black;";
+    QString borderBottom = bottomShip ? "border-bottom: none;" : "border-bottom: 2px solid black;";
+    QString borderLeft   = leftShip   ? "border-left: none;"   : "border-left: 2px solid black;";
+    QString borderRight  = rightShip  ? "border-right: none;"  : "border-right: 2px solid black;";
+
+    return borderTop + borderBottom + borderLeft + borderRight;
+}
